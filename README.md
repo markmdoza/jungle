@@ -12,6 +12,7 @@ A mini e-commerce application built with Rails 6.1 for purposes of teaching Rail
 6. Sign up for a Stripe account
 7. Put Stripe (test) keys into appropriate .env vars
 8. Run `bin/rails s -b 0.0.0.0` to start the server
+9. Visit your localhost for your viewing pleasure
 
 ## Database
 
@@ -21,7 +22,7 @@ If Rails is complaining about authentication to the database, uncomment the user
 
 Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
 
-More information in their docs: <https://stripe.com/docs/testing#cards>
+More information in their docs: <https://stripe.com/docs/**testing**#cards>
 
 ## Dependencies
 
