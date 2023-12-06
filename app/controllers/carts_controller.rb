@@ -1,6 +1,10 @@
 class CartsController < ApplicationController
 
   def show
+    if cart.empty?
+      render 'empty_cart'
+      return
+    end
   end
 
   def add_item
@@ -13,7 +17,6 @@ class CartsController < ApplicationController
   def remove_item
     product_id = params[:product_id].to_s
     modify_cart_delta(product_id, -1)
-
     redirect_back fallback_location: root_path
   end
 
