@@ -1,0 +1,7 @@
+<div class="line-item">
+  <img class="product-image" src="<%= line_item.product.image_url %>" alt="<%= line_item.product.name %>">
+  <h2><%= line_item.product.name %></h2>
+  <p><%= line_item.product.description %></p>
+  <h4>Quantity: <%= line_item.quantity %></h4>
+  <h4>Total: <%= humanized_money_with_symbol (line_item.quantity * line_item.item_price_cents) / 100.0 %></h4>
+</div>
