@@ -24,6 +24,17 @@ Rails.application.routes.draw do
     resources :categories, only: [:index, :new, :create]
   end
 
+scope module: 'main' do
+  root to: 'users#index', as: 'main_root'
+  get '/signup' => 'users#new'
+  post '/signup' => 'users#create'
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+  delete '/logout' => 'sessions#destroy'
+  post '/users' => 'users#create'
+end 
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
